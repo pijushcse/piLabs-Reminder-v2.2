@@ -17,6 +17,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowStateListener;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Timer;
@@ -36,7 +37,9 @@ public class RepeatAlarm extends javax.swing.JFrame {
     TrayIcon trayIcon;
     SystemTray tray;
     
+    transient List<String> arrayList;
 
+    String var = "Hello Sonar";
     int globalRemainingTime;
 
     public RepeatAlarm() {
@@ -45,6 +48,8 @@ public class RepeatAlarm extends javax.swing.JFrame {
         t = new Timer();
         t1 = new Timer();
 
+        arrayList.add(var);
+        
         jButton1.setActionCommand("Main");
 
         tray = SystemTray.getSystemTray();
